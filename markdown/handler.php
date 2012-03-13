@@ -1,11 +1,8 @@
-<?php
-header('Content-type: text/html; charset=utf-8');
-?>
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="<?php echo str_replace(basename(__FILE__), 'style.css', $_SERVER['SCRIPT_NAME']); ?>">
-	<meta name="content-type" http-equiv="content-type" value="text/html; utf-8">
 </head>
 <body>
 <?php
