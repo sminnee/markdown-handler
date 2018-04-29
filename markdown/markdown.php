@@ -214,8 +214,7 @@ class Markdown_Parser {
 	var $predef_urls = array();
 	var $predef_titles = array();
 
-
-	function Markdown_Parser() {
+	function __construct() {
 	#
 	# Constructor function. Initialize appropriate member variables.
 	#
@@ -236,6 +235,16 @@ class Markdown_Parser {
 		asort($this->document_gamut);
 		asort($this->block_gamut);
 		asort($this->span_gamut);
+	}
+
+	function Markdown_Parser() {
+	#
+	# Constructor function. Initialize appropriate member variables.
+	#
+		// PHP4-style constructor.
+        // This will NOT be invoked, unless a sub-class that extends `foo` calls it.
+        // In that case, call the new-style constructor to keep compatibility.
+		self::__construct();
 	}
 
 
